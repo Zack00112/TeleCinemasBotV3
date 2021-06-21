@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<i>I Have Found</i> <code>{leng}</code> <i>Results For Your Request😎:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
@@ -1436,6 +1436,48 @@ async def cb_accuracy(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
+                    "45 %", callback_data=f"set(accuracy|0.45|{chat_id}|{val})"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
+                    "40 %", callback_data=f"set(accuracy|0.40|{chat_id}|{val})"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
+                    "35 %", callback_data=f"set(accuracy|0.35|{chat_id}|{val})"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
+                    "30 %", callback_data=f"set(accuracy|0.30|{chat_id}|{val})"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
+                    "25 %", callback_data=f"set(accuracy|0.25|{chat_id}|{val})"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
+                    "20 %", callback_data=f"set(accuracy|0.20|{chat_id}|{val})"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
+                    "15 %", callback_data=f"set(accuracy|0.15|{chat_id}|{val})"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
                     "🔙 Back", callback_data=f"config({chat_id})"
                 )
         ]
@@ -1608,7 +1650,7 @@ async def cb_about(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/AlbertEinstein_TG"
+                    "Join Us ", url="https://t.me/telecinemas"
                 ),
                 
             InlineKeyboardButton
@@ -1639,10 +1681,8 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/AlbertEinstein_TG'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Filter-Bot-V2')
-        ],[
-            InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+            InlineKeyboardButton('Join US', url='https://t.me/telecinemas'),
+            InlineKeyboardButton('For Series', url ='https://t.me/tcseries')
         ],[
             InlineKeyboardButton('Help ⚙', callback_data="help")
         ]]
